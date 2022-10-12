@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Manipulator</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <div id="header">
+        <h1>Modify and sync your video and audio files!</h1>
+        <div id="list">
+            
+            <ul class="buttons"><a href="/openCombineClips">Combine video clips </a></ul>
+            
+            <ul class="buttons"><a href="/trimClips">Trim media to sync start time</a></ul>
+            <ul class="buttons"><a href="/replaceAudioFromVideo">Replace audio from video</a></ul>
+        </div>
+    </div>
+    <div id="middleSection" class="headerText">
+        <p id="welcome">Hey Tommy, pretty barebones stuff here. Quick reminder of the functions of this page as below.</p>
+        <div id="listParent">
+            <div id="dashes">
+                <div>- </div>
+                <div>- </div>
+                <div>- </div>
+            </div>
+            <div class="list">
+                <p>Combine video clips - The GoPros split up the audio files after 15 minutes, 
+                    this combines those split clips together.</p>
+                <p><span>Media to sync start time - This uses the text file and the audio start time
+                    to set the start time for all of the files to the same time. </span> 
+                    <span>i.e Audio start = 10:23:30, Forward Video = 10:23:20, Front Video = 10:23:25.</span>
+                    <span>The audio is the last time, so the other two will be trimmed to start at 10:23:30.</span> 
+                </p>
+                <p>Replace audio from video - As it sounds, the go pro audio is terrible and if you want to watch an event
+                    you can replace the gopro audio with the audio from the microphone so you dont have to manually do it yourself in a program.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>If you've got any problems or queries contact Tyler Best @ tbes0001@student.monash.edu</p>
+    </div>
+
+
+</body>
+</html>

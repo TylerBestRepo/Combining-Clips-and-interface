@@ -1,0 +1,263 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+/* Using span to move lines of text onto a new line  */
+p span{
+    display: block;
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+#header {
+    padding: 20px 0px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid lightgrey;
+}
+
+
+
+#header h1 {
+    padding-left: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    color: #1DA1F2;
+}
+
+#header #list {
+    display: flex;
+    margin: 0px 120px;
+    border: 1px solid #ebf0f3;
+    background-color: #ebf0f3;
+    border-radius: 10px;
+}
+
+#header #list ul {
+    font-size: 16px;
+    padding: 5px 30px;
+}
+
+
+
+/* All of the button related actions */
+.buttons a:link {
+    color:rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.buttons a:active {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.buttons a:visited {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+.buttons a:hover {
+    color:#1DA1F2;
+    text-decoration: none;
+    font-weight: none;
+}
+
+
+#middleSection {
+    min-height: 600px;
+    max-height: 800px;
+}
+
+#middleSection p{
+    font-size: 26px;
+    padding: 10px 40px;
+    
+}
+
+#middleSection .headerText{
+    font-weight: 650;
+}
+
+#middleSection #listParent {
+    display: flex;
+    justify-content: space-between;
+    
+    height: auto;
+}
+#middleSection #dashes {
+    height: 500px;
+    padding-left: 40px;
+    color: #1DA1F2;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#middleSection .list {
+    padding-right: 215px;
+}
+
+#middleSection .list p {
+    font-size: 18px;
+}
+
+#middleSection .list {
+    height: 500px;
+    padding-top:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#middleSection .list p {
+    padding-right:0px;
+}
+
+#footer {
+    height: 150px;
+    border-top: 0.5px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Combine clips dedicated things */
+
+#middleSection #questionAndAnswer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#middleSection #question {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 0.5px solid #ebf0f3;
+    background-color: #ebf0f3;
+}
+
+#middleSection #numClips {
+    padding-left: 10px;
+    height: 60px;
+    width: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: 0.5px solid black;
+    margin-bottom: 3px;
+}
+
+#middleSection #goBtn {
+    margin-top: 20px;
+    background-color:#1DA1F2;
+    width: 150px;
+    height: 75px;
+    border-radius: 30px;
+    border: 1px solid #1DA1F2;
+    padding: 10px;
+    font-size: 25px;
+    transition: transform .2s ease-in-out; 
+}
+
+#goBtn .removeNumClips {
+    display: none;
+}
+
+#spaceForLocations {
+    display: flex;
+    flex-direction: column;
+}
+
+#getTxtFileLocation {
+    margin-bottom: 10px;
+}
+
+#groupingTextDirectories {
+    display: flex;
+}
+#leftSideText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin-right: 5px;
+}
+
+#directories {
+    display: flex;
+    flex-direction: column;
+}
+
+.fileDirectories {
+    margin: 5px 0px;
+    height: 30px;
+    width: 450px;
+}
+
+.textNextToDirectories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionBtn {
+    margin-top: 20px;
+    background-color:#1DA1F2;
+    width: 135px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #1DA1F2;
+    padding: 10px;
+    font-size: 25px;
+    transition: transform .2s ease-in-out; 
+}
+ .actionBtn:hover {
+    color: white;
+    transform: scale(1.25);
+    font-size: 36px;
+}
+
+#middleSection #goBtn:hover {
+    color: white;
+    transform: scale(1.35);
+    font-size: 36px;
+}
+
+#numberSubmitForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1009px) {
+    #header h1 {
+      font-size: 26px;
+    }
+    #header {
+        height: 200%;
+    }
+  }
+
+  @media screen and (max-width: 555px) {
+    #middleSection .list {
+        padding-right: 20px;
+    }
+    #middleSection #welcome {
+        padding-right: 20px;
+    }
+}

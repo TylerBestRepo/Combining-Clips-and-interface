@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Clips</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <div id="header">
+        <h1>Modify and sync your video and audio files!</h1>
+        <div id="list">
+            <ul class="buttons"><a href="/combineClips.html">Combine video clips</a></ul>
+            <ul class="buttons"><a href="/trimClips.html">Trim media to sync start time</a></ul>
+            <ul class="buttons"><a href="/replaceAudioFromVideo.html">Replace audio from video</a></ul>
+        </div>
+    </div>
+    <div id="middleSection" class="headerText">
+        <p id="text">The purpose of this page is to combine the clips from each session that the GoPro splits while recording.</p>
+        <div id="questionAndAnswer">
+            <div id="question">How many clips will you be combining?</div>
+
+            <form action="/go" methods="POST" id="numberSubmitForm">
+                <input type="number" id="numClips" name="numClips" class="">
+                <div id="spaceForLocations">
+
+                </div>
+                <input type="submit" id="goBtn">
+           </form>
+           <button id="genFileBoxes" class="actionBtn">Next</button>
+        </div>
+        
+    </div>
+    <script src="/static/scripts/mainScript.js"></script>
+</body>
+</html>

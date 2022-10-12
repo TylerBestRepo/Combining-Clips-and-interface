@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Clips</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <div id="header">
+        <h1>Modify and sync your video and audio files!</h1>
+        <div id="list">
+            <ul class="buttons"><a href="/combineClips.html">Combine video clips</a></ul>
+            <ul class="buttons"><a href="/trimClips.html">Trim media to sync start time</a></ul>
+            <ul class="buttons"><a href="/replaceAudioFromVideo.html">Replace audio from video</a></ul>
+        </div>
+    </div>
+    <div id="middleSection" class="headerText">
+        <p id="text">The purpose of this page is to trim two of the media clips so they synchronise their start with
+            the latest starting media of the three files.</p>
+        <div id="questionAndAnswer">
+            <h3 id="getTxtFileLocation">Paste the directories for all of the files below</h3>
+            <form action="/trimClips" methods="POST" id="numberSubmitForm">
+                <div id="groupingTextDirectories">
+                    <div id="leftSideText">
+                        <div id="textFileText">txt file directory: </div>
+                        <div id="textFileText">Audio file directory: </div>
+                        <div id="forwardGoProText">Forward facing GoPro file directory: </div>
+                        <div id="faceGoProtext">Face Facing GoPro file directory: </div>
+                    </div>
+                    <div id="directories">
+                        <input type="text" id="txtFile" name="txtFile" class="fileDirectories">
+                        <input type="text" id="audioFile" name="audioFile" class="fileDirectories">
+                        <input type="text" id="forwardGoPro" name="forwardGoPro" class="fileDirectories">
+                        <input type="text" id="faceGoPro" name="faceGoPro" class="fileDirectories">
+                    </div>
+            </div>
+           </form>
+           <button id="genFileBoxes" class="actionBtn">Next</button>
+        </div>
+        
+    </div>
+    <script src="/static/scripts/trimScript.js"></script>
+</body>
+</html>
